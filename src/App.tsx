@@ -1,9 +1,9 @@
 import './App.css';
+import Todos  from './components/Todo';
 
 function App() {
   return (
-    <div>
-    </div>
+    <Todos items={['Learn React', 'Learn Ts']} />
   );
 }
 
