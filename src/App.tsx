@@ -12,10 +12,15 @@ const App = () => {
       return prevState.concat(newTodo);
     });
   };
+  const onClick = (todoId: string) => {
+    setTodos((prevTodos) => {
+      return prevTodos.filter((todo) => todo.id !== todoId);
+    });
+  };
   return (
     <>
       <NewForm onAddTodo={onAddTodoHandler} />
-      <Todos items={todos} />
+      <Todos items={todos} onClickHandlerWithId={onClick} />
     </>
   );
 };
