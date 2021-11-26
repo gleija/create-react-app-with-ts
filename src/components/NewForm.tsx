@@ -13,10 +13,12 @@ const NewForm: React.FC<{ onAddTodo: (text: string) => void }> = (props) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form>
       <label htmlFor="text">My Form</label>
       <input id="text" ref={inputValue} type="text" />
-      <button />
+      <button type="button" onClick={submitHandler}>
+        Add Todo
+      </button>
     </form>
   );
 };
